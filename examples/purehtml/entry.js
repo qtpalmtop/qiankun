@@ -3,6 +3,10 @@ const render = $ => {
   return Promise.resolve();
 };
 
+if (!window.__POWERED_BY_QIANKUN__) {
+  render($);
+}
+
 (global => {
   global['purehtml'] = {
     bootstrap: () => {
